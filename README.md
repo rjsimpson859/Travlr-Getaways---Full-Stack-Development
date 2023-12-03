@@ -1,4 +1,4 @@
-# cs465-fullstack
+# Travlr Getaways - Full Stack Development
 CS-465 Full Stack Development with MEAN.
 ### Architecture 
 Through this project, I gained hands-on experience in utilizing Express HTML, JavaScript, and building a Single Page Application (SPA). The backend infrastructure relied on Node.js and Express to serve the website while establishing connectivity with a MongoDB database. Leveraging the scalability and adaptable nature of NoSQL databases, we capitalized on MongoDB's capacity to accommodate dynamic changes. Additionally, the integration of Mongoose facilitated efficient data collection and object modeling.
