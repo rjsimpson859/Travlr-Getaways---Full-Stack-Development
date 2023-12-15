@@ -30,14 +30,23 @@ Some design constraints present in this web application development process incl
 
 ## System Architecture View
 ### Component Diagram
-ComponentDiagram.jpg
+
+![ComponentDiagram](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/86e67de2-daf3-4637-819b-75b3ca950026)
 
 The overall system architecture of the web application is demonstrated above in the component diagram. The client component consists of the user interface, where users can access the web application on a web browser component. The web browser component allows the user to access the Traveler Portfolio component. The Traveler Portfolio component contains access to the Graphic Library component and the Database Component. For this web application, the Database Component is MongoDB, the database where the information is stored for trips and alike information. The MongoDB component is also connected to the Mongoose ODM component in the Server Component. The Server Component includes the Authentication Server, which is used to authenticate the Client Session component.
 
 ### Sequence Diagram
+
+![SequenceDiagram](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/849a3443-f601-4284-9045-208c5a44bf9d)
+
+
 The flow of logic in the web application is displayed in the sequence diagram. The front end is in charge of managing the user interface and user inputs, receives this request. The back end is in charge of managing the business logic and data storage for the web application. This request includes data storage such as travel search. The Actor will open the browser, access the web application, Sign In with valid credentials. The Actor will then be able to search for available trips. The Actor is inputting username and password into the front end. The front end is then requesting validation from the back end. The back end then returns authentication or not.
 
 ### Class Diagram
+
+![ClassDiagram](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/967278fc-8b63-4c25-ba8e-4eebc3c88ba1)
+
+
 Based on the class diagram, Itinerary represents a travel itinerary that includes various travel components like flight, hotel, and cruise. The Itinerary Class has a start date, end date, origin, and destination for cruise, flight, and hotel info. CruiseInfo Class contains name, cabin type and price. FlightInfo Class contains name, seatclass, and price. HotelInfo Class contains name, star, location, roomrequested, and price. The TripInfo Class contains totalprice, totalmiles, and stopover from the CruiseInfo, FlightInfo, and HotelInfo Classes. HotelBooking, CruiseBooking, and FlightBooking classes handle the booking process for their respective travel components. Travel_Agent class contains BookPackage, BookFlight, BookHotel, and BookCruise. MemberAccount class contains membernumber, frequent_airline, memberstatus, and memberclub.
 
 ## API Endpoints
@@ -55,13 +64,13 @@ Based on the class diagram, Itinerary represents a travel itinerary that include
 | DELETE | Delete a single thing | /api/things/:thingId | Delete a single thing, identified by the thing ID passed on the request URL |
 
 ## The User Interface
-![Unique Trip](link-to-unique-trip-screenshot)
+![AddedTripPic](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/97ec2c91-ec8d-4db4-9daa-5f16eeb5b0d3)
 *Figure 1: Screenshot of a unique trip, added*
 
-![Edit Screen](link-to-edit-screen-screenshot)
+![EditScreenshot](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/45909584-33a5-4e36-a8bb-5c0a322bfb48)
 *Figure 2: Screenshot of the Edit screen*
 
-![Update Screen](link-to-update-screen-screenshot)
+![UpdateScreenshot](https://github.com/rjsimpson859/Travlr-Getaways---Full-Stack-Development/assets/97195144/5a1d3819-1ada-4e46-be5a-c67414e4a0cd)
 *Figure 3: Screenshot of the Update screen*
 
 The Angular project structure is different from that of the Express HTML customer-facing page, in terms of component-driven development. Some advantages and disadvantages of the SPA functionality include seamless user experiences, faster navigation, and reduced server load but may face SEO challenges and initial load time concerns. The process of testing to make sure the SPA is working with the API to GET and PUT data in the database include unit and integration tests, encountering CORS issues.
