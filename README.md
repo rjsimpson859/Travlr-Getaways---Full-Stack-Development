@@ -1,3 +1,75 @@
+# Travlr Getaways
+## CS 465 Project Software Design Document
+### Version 1.0
+
+## Table of Contents
+- [Document Revision History](#document-revision-history)
+- [Instructions](#instructions)
+- [Executive Summary](#executive-summary)
+- [Design Constraints](#design-constraints)
+- [System Architecture View](#system-architecture-view)
+  - [Component Diagram](#component-diagram)
+  - [Sequence Diagram](#sequence-diagram)
+  - [Class Diagram](#class-diagram)
+  - [API Endpoints](#api-endpoints)
+- [The User Interface](#the-user-interface)
+
+## Document Revision History
+| Version | Date       | Author       | Comments                                          |
+|---------|------------|--------------|---------------------------------------------------|
+| 1.0     | 07/16/2023 | Roy Simpson  | Updated Executive Summary, Design constraints, and Described Component Diagram |
+| 2.0     | 07/30/2023 | Roy Simpson  | Updates Sequence Diagram, Class Diagram, and API Endpoints |
+| 3.0     | 08/13/2023 | Roy Simpson  | Added Screenshots and provided further details to the User Interface section |
+
+## Instructions
+Fill in all bracketed information on page one (the cover page), in the Document Revision History table, and below each header. Under each header, remove the bracketed prompt and write your own paragraph response covering the indicated information.
+
+## Executive Summary
+Travlr Getaways is a web application that enables users to securely book trips. This web application includes a user interface, backend, and a database. We used MEAN (MongoDB, Express, Angular, and Node) stack for the development of this web application. The benefit of using the MEAN stack is that they are all can be written in JavaScript, allowing the development process to integrate quickly and flexibly. The customer-facing side of the application will allow the users to book vacation rentals, providing them with the price and number of nights. The administrator single-page application (SPA) will allow for updating the trip availability.
+
+## Design Constraints
+Some design constraints present in this web application development process include scalability. Using the MEAN stack for a very large-scale application may not be ideal. If the web application incurs a large flow of traffic, there is a possibility of data loss when MongoDB is writing large numbers of documents. We have yet to develop a security feature to authenticate user login to allow users to access their secure travel details. Security features are necessary in a web application to ensure the users data is protected.
+
+## System Architecture View
+### Component Diagram
+A text version of the component diagram is available: [CS 465 Full Stack Component Diagram Text Version](link-to-component-diagram-text).
+
+The overall system architecture of the web application is demonstrated above in the component diagram. The client component consists of the user interface, where users can access the web application on a web browser component. The web browser component allows the user to access the Traveler Portfolio component. The Traveler Portfolio component contains access to the Graphic Library component and the Database Component. For this web application, the Database Component is MongoDB, the database where the information is stored for trips and alike information. The MongoDB component is also connected to the Mongoose ODM component in the Server Component. The Server Component includes the Authentication Server, which is used to authenticate the Client Session component.
+
+### Sequence Diagram
+The flow of logic in the web application is displayed in the sequence diagram. The front end is in charge of managing the user interface and user inputs, receives this request. The back end is in charge of managing the business logic and data storage for the web application. This request includes data storage such as travel search. The Actor will open the browser, access the web application, Sign In with valid credentials. The Actor will then be able to search for available trips. The Actor is inputting username and password into the front end. The front end is then requesting validation from the back end. The back end then returns authentication or not.
+
+### Class Diagram
+Based on the class diagram, Itinerary represents a travel itinerary that includes various travel components like flight, hotel, and cruise. The Itinerary Class has a start date, end date, origin, and destination for cruise, flight, and hotel info. CruiseInfo Class contains name, cabin type and price. FlightInfo Class contains name, seatclass, and price. HotelInfo Class contains name, star, location, roomrequested, and price. The TripInfo Class contains totalprice, totalmiles, and stopover from the CruiseInfo, FlightInfo, and HotelInfo Classes. HotelBooking, CruiseBooking, and FlightBooking classes handle the booking process for their respective travel components. Travel_Agent class contains BookPackage, BookFlight, BookHotel, and BookCruise. MemberAccount class contains membernumber, frequent_airline, memberstatus, and memberclub.
+
+## API Endpoints
+| Method | Purpose | URL | Notes |
+|--------|---------|-----|-------|
+| GET    | Retrieve list of things | /api/things | Returns all active things |
+| GET    | Retrieve single thing | /api/things/:thingId | Returns single thing instance, identified by the thing ID passed on the request URL |
+| POST   | Create new list of things | /api/things | Create a new list of things |
+| POST   | Create a single thing | /api/things/:thingId | Create a single thing, identified by the thing ID passed on the request URL |
+| PUT    | Update the full list of things | /api/things | Updates and replaces entire list of things. |
+| PUT    | Update a single thing | /api/things/:thingId | Updates and replaces a single thing, identified by the thing ID passed on the request URL |
+| PATCH  | Update full list of things | /api/things | Update a full list of things and modify the list of things. |
+| PATCH  | Update or modify a single thing | /api/things/:thingId | Update and modify a single thing, identified by the thing ID passed on the request URL |
+| DELETE | Delete a list of things | /api/things | Delete all the list of things. |
+| DELETE | Delete a single thing | /api/things/:thingId | Delete a single thing, identified by the thing ID passed on the request URL |
+
+## The User Interface
+![Unique Trip](link-to-unique-trip-screenshot)
+*Figure 1: Screenshot of a unique trip, added*
+
+![Edit Screen](link-to-edit-screen-screenshot)
+*Figure 2: Screenshot of the Edit screen*
+
+![Update Screen](link-to-update-screen-screenshot)
+*Figure 3: Screenshot of the Update screen*
+
+The Angular project structure is different from that of the Express HTML customer-facing page, in terms of component-driven development. Some advantages and disadvantages of the SPA functionality include seamless user experiences, faster navigation, and reduced server load but may face SEO challenges and initial load time concerns. The process of testing to make sure the SPA is working with the API to GET and PUT data in the database include unit and integration tests, encountering CORS issues.
+
+
+
 # Travlr Getaways - Full Stack Development
 CS-465 Full Stack Development with MEAN.
 ### Architecture 
