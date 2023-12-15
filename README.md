@@ -21,8 +21,6 @@
 | 2.0     | 07/30/2023 | Roy Simpson  | Updates Sequence Diagram, Class Diagram, and API Endpoints |
 | 3.0     | 08/13/2023 | Roy Simpson  | Added Screenshots and provided further details to the User Interface section |
 
-## Instructions
-Fill in all bracketed information on page one (the cover page), in the Document Revision History table, and below each header. Under each header, remove the bracketed prompt and write your own paragraph response covering the indicated information.
 
 ## Executive Summary
 Travlr Getaways is a web application that enables users to securely book trips. This web application includes a user interface, backend, and a database. We used MEAN (MongoDB, Express, Angular, and Node) stack for the development of this web application. The benefit of using the MEAN stack is that they are all can be written in JavaScript, allowing the development process to integrate quickly and flexibly. The customer-facing side of the application will allow the users to book vacation rentals, providing them with the price and number of nights. The administrator single-page application (SPA) will allow for updating the trip availability.
