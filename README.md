@@ -1,6 +1,6 @@
 # Travlr Getaways
 ## CS 465 Project Software Design Document
-### Version 1.0
+### Version 3.0
 
 ## Table of Contents
 - [Document Revision History](#document-revision-history)
