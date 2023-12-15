@@ -1,4 +1,5 @@
 # Travlr Getaways
+Check out the 8 branches of the respository for all the detail. 
 ## CS 465 Project Software Design Document
 ### Version 3.0
 
