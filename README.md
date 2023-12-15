@@ -30,7 +30,7 @@ Some design constraints present in this web application development process incl
 
 ## System Architecture View
 ### Component Diagram
-A text version of the component diagram is available: [CS 465 Full Stack Component Diagram Text Version](link-to-component-diagram-text).
+ComponentDiagram.jpg
 
 The overall system architecture of the web application is demonstrated above in the component diagram. The client component consists of the user interface, where users can access the web application on a web browser component. The web browser component allows the user to access the Traveler Portfolio component. The Traveler Portfolio component contains access to the Graphic Library component and the Database Component. For this web application, the Database Component is MongoDB, the database where the information is stored for trips and alike information. The MongoDB component is also connected to the Mongoose ODM component in the Server Component. The Server Component includes the Authentication Server, which is used to authenticate the Client Session component.
 
